@@ -1,0 +1,280 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\DELL\\PlayWrightDemo\\playwright.config.ts",
+    "rootDir": "C:/Users/DELL/PlayWrightDemo/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/DELL/PlayWrightDemo/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/DELL/PlayWrightDemo/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        {
+          "open": "always",
+          "outputFolder": "html-report"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "junit-results.xml"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "junit-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.60.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "reporters.spec.ts",
+      "file": "reporters.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "verify logo",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2995,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('img[alt=\"Tricentis Demo Web Shop\"]')\nExpected: visible\nReceived: undefined\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('img[alt=\"Tricentis Demo Web Shop\"]')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('img[alt=\"Tricentis Demo Web Shop\"]')\nExpected: visible\nReceived: undefined\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('img[alt=\"Tricentis Demo Web Shop\"]')\u001b[22m\n\n    at C:\\Users\\DELL\\PlayWrightDemo\\tests\\reporters.spec.ts:11:18",
+                    "location": {
+                      "file": "C:\\Users\\DELL\\PlayWrightDemo\\tests\\reporters.spec.ts",
+                      "column": 18,
+                      "line": 11
+                    },
+                    "snippet": "\u001b[0m \u001b[90m  9 |\u001b[39m\n \u001b[90m 10 |\u001b[39m     \u001b[36mconst\u001b[39m logo \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'img[alt=\"Tricentis Demo Web Shop\"]'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m     expect(logo)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m })\n \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\DELL\\PlayWrightDemo\\tests\\reporters.spec.ts",
+                        "column": 18,
+                        "line": 11
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('img[alt=\"Tricentis Demo Web Shop\"]')\nExpected: visible\nReceived: undefined\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('img[alt=\"Tricentis Demo Web Shop\"]')\u001b[22m\n\n\n\u001b[0m \u001b[90m  9 |\u001b[39m\n \u001b[90m 10 |\u001b[39m     \u001b[36mconst\u001b[39m logo \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'img[alt=\"Tricentis Demo Web Shop\"]'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m     expect(logo)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m })\n \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\DELL\\PlayWrightDemo\\tests\\reporters.spec.ts:11:18\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-18T16:34:59.659Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\DELL\\PlayWrightDemo\\test-results\\reporters-verify-logo-chromium\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\DELL\\PlayWrightDemo\\tests\\reporters.spec.ts",
+                    "column": 18,
+                    "line": 11
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "bde4792341cd3e9e9db3-20768532fc400e9bed89",
+          "file": "reporters.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "verify products",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2803,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.product-grid2')\nExpected: visible\nReceived: undefined\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.product-grid2')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.product-grid2')\nExpected: visible\nReceived: undefined\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.product-grid2')\u001b[22m\n\n    at C:\\Users\\DELL\\PlayWrightDemo\\tests\\reporters.spec.ts:18:29",
+                    "location": {
+                      "file": "C:\\Users\\DELL\\PlayWrightDemo\\tests\\reporters.spec.ts",
+                      "column": 29,
+                      "line": 18
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m     \u001b[36mconst\u001b[39m featureProducts \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.product-grid2'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m     expect(featureProducts)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 19 |\u001b[39m })\n \u001b[90m 20 |\u001b[39m\n \u001b[90m 21 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\DELL\\PlayWrightDemo\\tests\\reporters.spec.ts",
+                        "column": 29,
+                        "line": 18
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.product-grid2')\nExpected: visible\nReceived: undefined\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.product-grid2')\u001b[22m\n\n\n\u001b[0m \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m     \u001b[36mconst\u001b[39m featureProducts \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.product-grid2'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m     expect(featureProducts)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 19 |\u001b[39m })\n \u001b[90m 20 |\u001b[39m\n \u001b[90m 21 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\DELL\\PlayWrightDemo\\tests\\reporters.spec.ts:18:29\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-18T16:35:03.832Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\DELL\\PlayWrightDemo\\test-results\\reporters-verify-products-chromium\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\DELL\\PlayWrightDemo\\tests\\reporters.spec.ts",
+                    "column": 29,
+                    "line": 18
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "bde4792341cd3e9e9db3-fe3fe41bd6661576255c",
+          "file": "reporters.spec.ts",
+          "line": 15,
+          "column": 5
+        },
+        {
+          "title": "verify title",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2731,
+                  "error": {
+                    "message": "Error: page.title: Test ended.",
+                    "stack": "Error: page.title: Test ended.\n    at C:\\Users\\DELL\\PlayWrightDemo\\tests\\reporters.spec.ts:24:10",
+                    "location": {
+                      "file": "C:\\Users\\DELL\\PlayWrightDemo\\tests\\reporters.spec.ts",
+                      "column": 10,
+                      "line": 24
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 22 |\u001b[39m test(\u001b[32m\"verify title\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[90m// some portion of the page\u001b[39m\n \u001b[90m 23 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     page\u001b[33m.\u001b[39mtitle()\u001b[33m.\u001b[39mthen((title) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m         expect(title)\u001b[33m.\u001b[39mtoBe(\u001b[32m\"Tricentis Demo Web Shop\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m     })\n \u001b[90m 27 |\u001b[39m })\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\DELL\\PlayWrightDemo\\tests\\reporters.spec.ts",
+                        "column": 10,
+                        "line": 24
+                      },
+                      "message": "Error: page.title: Test ended.\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test(\u001b[32m\"verify title\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[90m// some portion of the page\u001b[39m\n \u001b[90m 23 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     page\u001b[33m.\u001b[39mtitle()\u001b[33m.\u001b[39mthen((title) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m         expect(title)\u001b[33m.\u001b[39mtoBe(\u001b[32m\"Tricentis Demo Web Shop\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m     })\n \u001b[90m 27 |\u001b[39m })\u001b[0m\n\u001b[2m    at C:\\Users\\DELL\\PlayWrightDemo\\tests\\reporters.spec.ts:24:10\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-18T16:35:07.504Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\DELL\\PlayWrightDemo\\test-results\\reporters-verify-title-chromium\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\DELL\\PlayWrightDemo\\tests\\reporters.spec.ts",
+                    "column": 10,
+                    "line": 24
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "bde4792341cd3e9e9db3-827d900f89e6fe278d99",
+          "file": "reporters.spec.ts",
+          "line": 22,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-06-18T16:34:58.791Z",
+    "duration": 11691.234999999999,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}

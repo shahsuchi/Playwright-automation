@@ -1,0 +1,94 @@
+<testsuites id="" name="" tests="3" failures="2" skipped="0" errors="1" time="11.691234999999999">
+<testsuite name="reporters.spec.ts" timestamp="2026-06-18T16:34:58.819Z" hostname="chromium" tests="3" failures="2" skipped="0" time="8.529" errors="1">
+<testcase name="verify logo" classname="reporters.spec.ts" time="2.995">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\reporters-verify-logo-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › reporters.spec.ts:8:5 › verify logo ─────────────────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('img[alt="Tricentis Demo Web Shop"]')
+    Expected: visible
+    Received: undefined
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('img[alt="Tricentis Demo Web Shop"]')
+
+
+       9 |
+      10 |     const logo = page.locator('img[alt="Tricentis Demo Web Shop"]');
+    > 11 |     expect(logo).toBeVisible();
+         |                  ^
+      12 | })
+      13 |
+      14 |
+        at C:\Users\DELL\PlayWrightDemo\tests\reporters.spec.ts:11:18
+
+    Error Context: ..\test-results\reporters-verify-logo-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="verify products" classname="reporters.spec.ts" time="2.803">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\reporters-verify-products-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › reporters.spec.ts:15:5 › verify products ────────────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('.product-grid2')
+    Expected: visible
+    Received: undefined
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('.product-grid2')
+
+
+      16 |
+      17 |     const featureProducts = page.locator('.product-grid2');
+    > 18 |     expect(featureProducts).toBeVisible();
+         |                             ^
+      19 | })
+      20 |
+      21 |
+        at C:\Users\DELL\PlayWrightDemo\tests\reporters.spec.ts:18:29
+
+    Error Context: ..\test-results\reporters-verify-products-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="verify title" classname="reporters.spec.ts" time="2.731">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\reporters-verify-title-chromium\error-context.md]]
+]]>
+</system-out>
+<error message="page.title: Test ended." type="Error">
+<![CDATA[  [chromium] › reporters.spec.ts:22:5 › verify title ───────────────────────────────────────────────
+
+    Error: page.title: Test ended.
+
+      22 | test("verify title", async ({ page }) => {// some portion of the page
+      23 |
+    > 24 |     page.title().then((title) => {
+         |          ^
+      25 |         expect(title).toBe("Tricentis Demo Web Shop");
+      26 |     })
+      27 | })
+        at C:\Users\DELL\PlayWrightDemo\tests\reporters.spec.ts:24:10
+
+    Error Context: ..\test-results\reporters-verify-title-chromium\error-context.md
+]]>
+</error>
+</testcase>
+</testsuite>
+</testsuites>

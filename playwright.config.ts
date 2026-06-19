@@ -16,15 +16,15 @@ export default defineConfig({
   /* to change default timeout globally for all tests - default is 30000 ms/ 30 sec */
   timeout: 60000,
 
-  grep: /@sanity/, //specifying the tag
-  grepInvert: /@regression/,
+  // grep: /@sanity/, //specifying the tag
+  // grepInvert: /@regression/,
   // grep: /(?=.*@sanity) (?=.*@regression)/, // either or 
 
 
   /*to apply a longer wait for all expect conditions default 5000ms / 5 sec*/
   // expect :{timeout :10000},
   /* Run tests in files in parallel */
-  fullyParallel: false,
+  fullyParallel: true, // if false run in serail mode
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
@@ -33,9 +33,24 @@ export default defineConfig({
   // retries: 3, // updated by suchi shah
 
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  // workers: process.env.CI ? 1 : undefined,
+  workers: 1,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  // reporter: 'html',
+
+  // reporter: [['html', { open: 'always', 'outputFolder': 'html-report' }]], // to generate the html report and open it manually
+
+  reporter: [['html', { open: 'always', 'outputFolder': 'html-report' }],
+  //  ['list'],
+  //  ['line']
+  // ['dot'],
+  // ['junit', { outputFile: 'junit-results.xml' }],
+  // ['json', { outputFile: 'junit-results.json' }],
+  ['allure-playwright'],
+  ['./my-awesome-reporter.ts'],
+
+  ],// to print the result in the console
+
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
@@ -45,9 +60,8 @@ export default defineConfig({
     // trace: 'off',
     testIdAttribute: 'data-pw', // additional config - instead of data-testid it will use data-pw
 
-    // screenshot: 'only-on-failure', // capture the screenshot only on failure,
-    // video: 'retain-on-failure',
-
+    screenshot: 'only-on-failure', // capture the screenshot only on failure,
+    video: 'retain-on-failure',
   },
 
   /* Configure projects for major browsers */
@@ -55,6 +69,8 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
+      fullyParallel: true,  // browser specific
+
     },
 
     // {

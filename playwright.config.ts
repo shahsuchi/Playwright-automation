@@ -12,7 +12,7 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: './tests',
+  testDir: './tests/',
   /* to change default timeout globally for all tests - default is 30000 ms/ 30 sec */
   timeout: 60000,
 
@@ -41,13 +41,13 @@ export default defineConfig({
   // reporter: [['html', { open: 'always', 'outputFolder': 'html-report' }]], // to generate the html report and open it manually
 
   reporter: [['html', { open: 'always', 'outputFolder': 'html-report' }],
-  //  ['list'],
-  //  ['line']
-  // ['dot'],
-  // ['junit', { outputFile: 'junit-results.xml' }],
-  // ['json', { outputFile: 'junit-results.json' }],
-  ['allure-playwright'],
-  ['./my-awesome-reporter.ts'],
+    //  ['list'],
+    //  ['line']
+    // ['dot'],
+    // ['junit', { outputFile: 'junit-results.xml' }],
+    // ['json', { outputFile: 'junit-results.json' }],
+    // ['allure-playwright'],
+    // ['./my-awesome-reporter.ts'],
 
   ],// to print the result in the console
 

@@ -11,21 +11,30 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
       - name: Setup Node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: "24" # use runner default / newer Node
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Install Playwright
+      - name: Install Playwright (browsers + deps)
         run: npx playwright install --with-deps
 
-      - name: Install Playwright browsers
-        run: npx playwright install --with-deps
+      # Diagnostic: show repository files to confirm tests are present
+      - name: List repo files
+        run: |
+          pwd
+          ls -la
+          ls -la ./tests || true
+          git status --porcelain
+
+      # Diagnostic: show what Playwright finds (will help debugging zero-tests)
+      - name: List Playwright-discovered tests
+        run: npx playwright test --list || true
 
       - name: Run tests
         run: npx playwright test

@@ -44,7 +44,7 @@ test("filter the rows and check the rows count", async ({ page }) => {
     await page.waitForTimeout(5000);
 })
 
-test.only("search for specific data into table", async ({ page }) => {
+test("search for specific data into table", async ({ page }) => {
     await page.goto("https://datatables.net/examples/basic_init/zero_configuration.html");
     const searchBox: Locator = page.locator('#dt-search-0');
     await searchBox.fill('Unity');

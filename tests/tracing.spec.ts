@@ -1,6 +1,6 @@
 import { test, expect, Locator } from "@playwright/test"
 
-test.only("tracing demo", async ({ page, context }) => {
+test("tracing demo", async ({ page, context }) => {
 
     //  npx playwright test --headed --trace on 
 

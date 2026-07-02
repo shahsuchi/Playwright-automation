@@ -1,6 +1,6 @@
 import { test, expect, Locator } from "@playwright/test"
 
-test.only("flaky demo", async ({ page, context }) => {
+test("flaky demo", async ({ page, context }) => {
     // npx playwright test tests/flaky.spec.ts --retries=3
 
     await page.goto("https://demowebshop.tricentis.com/");

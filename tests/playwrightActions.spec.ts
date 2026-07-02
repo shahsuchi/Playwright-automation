@@ -23,7 +23,7 @@ test("Text actions Example", async ({ page }) => {
 
 });
 // only one test will run
-// test.only("radio button actions Example", async ({ page }) => {
+// test("radio button actions Example", async ({ page }) => {
 
 test("radio button actions Example", async ({ page }) => {
 
@@ -45,7 +45,7 @@ test("radio button actions Example", async ({ page }) => {
 
 });
 
-test.only("checkbox actions Example", async ({ page }) => {
+test("checkbox actions Example", async ({ page }) => {
 
     await page.goto("https://testautomationpractice.blogspot.com/");
 

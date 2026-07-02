@@ -21,7 +21,7 @@ test("screenshots demo", async ({ page }) => {
     console.log("Screenshot completed");
 })
 
-test.only("screenshots config demo", async ({ page }) => {
+test("screenshots config demo", async ({ page }) => {
 
     await page.goto("https://demowebshop.tricentis.com/");
 

@@ -59,7 +59,7 @@ test("confirmation alert dialog scenarios", async ({ page }) => {
 
 })
 
-test.only("prompt alert dialog scenarios", async ({ page }) => {
+test("prompt alert dialog scenarios", async ({ page }) => {
 
     await page.goto("https://testautomationpractice.blogspot.com/");
     let alertStatus: boolean = true;
